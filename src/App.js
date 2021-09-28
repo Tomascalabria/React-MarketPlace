@@ -1,9 +1,12 @@
+import { ItemListContainer } from "./Components/ItemListContainer/itemListContainer";
 import { NavBar } from "./Components/NavBar/navBar";
 
 function App() {
   return (
     <>
-    <NavBar titulo="TimBurton Shop"producto1="Botas" producto2="Remeras"producto3="Anteojos"/>
+    <NavBar titulo="TimBurton Shop"producto1="Personajes" producto2="Peliculas"producto3="Indumentaria"/>
+   
+    <ItemListContainer  />
     </>
   );
 }

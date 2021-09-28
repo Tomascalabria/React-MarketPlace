@@ -7,7 +7,7 @@ export const CartWidget =()=>{
         <img className="cartIcon" src={cartImg } alt="CartIcon" />      
         
             <div className="login">
-                <img className="login-Img" src={loginImg} alt="login image" />
+                <img className="login-Img" src={loginImg} alt="login " />
                 <p> {`Log In`}</p>
             </div>  
             </div>

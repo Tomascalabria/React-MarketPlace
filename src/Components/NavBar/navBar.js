@@ -9,14 +9,14 @@ export const NavBar =({titulo,producto1,producto2,producto3})=> {
            
             <h3>{titulo}</h3>
             </div>
-             <p className="producto">{producto1}</p>
-             <p className="producto">{producto2}</p>
-             <p className="producto">{producto3}</p>
+             <p className="producto producto1">{producto1}</p>
+             <p className="producto producto2">{producto2}</p>
+             <p className="producto producto3">{producto3}</p>
             
             
              <CartWidget/>
         </section>
-  
+        
     </>
     )
 
