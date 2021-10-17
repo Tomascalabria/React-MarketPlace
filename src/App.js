@@ -2,6 +2,8 @@ import { ItemListContainer } from "./Components/ItemListContainer/itemListContai
 import { NavBar } from "./Components/NavBar/navBar";
 import {BrowserRouter,Route,Switch,Redirect} from "react-router-dom";
 import { CartWidget } from "./Components/CartWidget/CartWidget";
+import {ItemDetailContainer} from "../src/Components/itemDetailContainer/ItemDetailContainer"
+  
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
        <h3> PROXIMAMENTE </h3>
       </Route>
       
+      <Route exact path="/detail/:itemId">
+        <ItemDetailContainer/>
+      </Route>
     </BrowserRouter>
     </>
   );

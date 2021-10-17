@@ -34,16 +34,20 @@
                 }
                 .categoria{
                     color: orange;
+                    font-weight: bolder;
                 }      
                     .btn, .btn-primary {
                         background: transparent;
                         width: 66%;
                         height: 3rem;
-                        border: solid transparent;
+                        margin-top: 1rem;
+                        border: solid white 1px;
+                        border-radius: 20px;
                         color: #ffff;
                         font-weight: bolder;       
                         font-size: 1.4rem;             
-                    }   
+                    }  
+                     
                 
         }
     }

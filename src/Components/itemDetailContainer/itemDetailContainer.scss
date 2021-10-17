@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    h2{
+        color: rgb(206, 48, 206);
+        font-family: 'fuente1';
+        font-size: 6rem;
+    }
+    }
+    .itemDetailContainer{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        flex-direction: column;
+    
+        .itemDetailName{
+            color: violet;
+            font-size: 3.8rem;
+            font-family: 'fuente1' ;
+        }   
+        .itemDetailDesc{
+            color: #ffff;
+            font-size: 1.4rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .itemDetailPrice{
+            font-size: 1.6rem;
+            color: #ffff;
+        }         
+        .btn, .btn-primary {
+            background: transparent;
+            width: 66%;
+            height: 3rem;
+            margin-top: 1rem;
+            border: solid white 1px;
+            border-radius: 20px;
+            color: #ffff;
+            font-weight: bolder;       
+            font-size: 1.4rem;             
+        }  
+         
+    
+        
+     
+    }

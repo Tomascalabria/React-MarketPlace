@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
+import { ItemListContainer } from '../ItemListContainer/itemListContainer';
 
 export const NavBar =({titulo,Personajes,Peliculas,Contacto})=> {
     return(
@@ -8,7 +9,7 @@ export const NavBar =({titulo,Personajes,Peliculas,Contacto})=> {
         <section className="navbar-container">
            <div className="navbar"> 
            
-            <h3>{titulo}</h3>
+             <NavLink to ="/"> <h3>{titulo}</h3> </NavLink>
             </div>
 
             <NavLink activeClassName="active-link"  exact to="/Productos/Personajes">{Personajes} </NavLink>
