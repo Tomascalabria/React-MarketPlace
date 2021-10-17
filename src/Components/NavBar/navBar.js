@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
 
-export const NavBar =({titulo,producto1,producto2,producto3})=> {
+export const NavBar =({titulo,Personajes,Peliculas,Contacto})=> {
     return(
         <>
         <section className="navbar-container">
@@ -9,12 +10,16 @@ export const NavBar =({titulo,producto1,producto2,producto3})=> {
            
             <h3>{titulo}</h3>
             </div>
-             <p className="producto producto1">{producto1}</p>
-             <p className="producto producto2">{producto2}</p>
-             <p className="producto producto3">{producto3}</p>
+
+            <NavLink activeClassName="active-link"  exact to="/Productos/Personajes">{Personajes} </NavLink>
+            <NavLink activeClassName="active-link" exact to="/Productos/Peliculas" >{Peliculas} </NavLink>
+            <NavLink activeClassName="active-link" to="/Contacto">{Contacto} </NavLink>
+            
+             
+             
             
             
-             <CartWidget/>
+            <Link to="/cart">  <CartWidget/> </Link>
         </section>
         
     </>

@@ -24,6 +24,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  
   .navbar-logo {
  
     width: 57px;
@@ -36,16 +37,19 @@
    font-size: auto;
    font-family: 'fuente1';
   }
-}
-  .producto{
-    text-decoration: none;
-    list-style: none;
-    color: #ffff;
-    font-weight: bold;
-    font-size: 2.4rem;
-    font-family: 'fuente1';
-  }
   
+}
+  
+a{
+  
+  text-decoration: none;
+  list-style: none;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 2.4rem;
+  font-family: 'fuente1';
+
+}
 .cartIconContainer{ 
 width: 100%;
 .cartIcon{
@@ -54,5 +58,12 @@ height: 50px;
 background-color: black;
 }
 }
-
+.active-link{
+  width: 120px;
+  border: solid white 5px;
+   border-radius:5px;
+   justify-content: center;
+   align-items:center;
+   display: flex;
+}
 }

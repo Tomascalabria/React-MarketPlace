@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card,Button} from 'react-bootstrap';
-export const Item = ({ id, name, price, img }) => {
+export const Item = ({ id, name, price, img, categoria }) => {
 
   return (
  
@@ -13,7 +13,7 @@ export const Item = ({ id, name, price, img }) => {
         <Card.Title>{name}</Card.Title>
  
         <Card.Text><span>$</span>{price}</Card.Text>
- 
+        <Card.Text className="categoria" >{categoria}</Card.Text>
         <Button variant='primary'>COMPRAR </Button>
  
       </Card.Body>
