@@ -1,14 +1,17 @@
 import { ItemListContainer } from "./Components/ItemListContainer/itemListContainer";
 import { NavBar } from "./Components/NavBar/navBar";
 import {BrowserRouter,Route,Switch,Redirect} from "react-router-dom";
-import { CartWidget } from "./Components/CartWidget/CartWidget";
+
 import {ItemDetailContainer} from "../src/Components/itemDetailContainer/ItemDetailContainer"
+import { Login } from "./Components/loginContainer/login";
+import { CartContext } from "./Contextos/CartContext.";
   
 
 function App() {
+const saludo ="hola carla mamita"
   return (
     <>
-
+    <CartContext.Provider value={saludo } />
     <BrowserRouter>
     <NavBar titulo= "TimBurton Shop" Personajes="Personajes" Peliculas="Peliculas" Contacto="Contacto"/>
     
@@ -38,6 +41,12 @@ function App() {
       <Route exact path="/detail/:itemId">
         <ItemDetailContainer/>
       </Route>
+    
+      {/* <Route exact path="/login">
+        <Login/>
+      </Route> */}
+
+      
     </BrowserRouter>
     </>
   );

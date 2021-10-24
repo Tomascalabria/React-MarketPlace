@@ -26,9 +26,9 @@
   align-items: center;
   
   .navbar-logo {
- 
     width: 57px;
     height: 57px;
+   
   }
   h3{
    color: white;
@@ -36,6 +36,11 @@
    font-size: 3.5rem;         
    font-size: auto;
    font-family: 'fuente1';
+
+   &:hover{
+    color: #ce30ce;
+    font-weight: bolder;
+  }
   }
   
 }
@@ -48,16 +53,30 @@ a{
   font-weight: bold;
   font-size: 2.4rem;
   font-family: 'fuente1';
+  &:hover{
+    color: #ce30ce;
+  }
 
 }
-.cartIconContainer{ 
-width: 100%;
-.cartIcon{
-width: 50px;
-height: 50px;
-background-color: black;
+.cart-container{ 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  p{
+  color: #ce30ce;
+  font-family:' fuente1';
+  &:hover{
+    color: rgb(56, 139, 56);
+  
+  }
 }
-}
+  }img.cartIcon {
+      width: 40px;
+      height: 39px;
+  
+  }
+  
 .active-link{
   width: 120px;
   border: solid white 5px;
@@ -65,5 +84,8 @@ background-color: black;
    justify-content: center;
    align-items:center;
    display: flex;
+   &:hover{
+    border: solid #ce30ce 5px;
+   }
 }
 }

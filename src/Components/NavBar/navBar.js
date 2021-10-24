@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
-import { ItemListContainer } from '../ItemListContainer/itemListContainer';
+import { LoginContainer } from '../loginContainer/loginContainer';
 
-export const NavBar =({titulo,Personajes,Peliculas,Contacto})=> {
+
+export const NavBar =({titulo,Personajes,Peliculas,Contacto,Login})=> {
+
     return(
         <>
         <section className="navbar-container">
@@ -15,12 +17,8 @@ export const NavBar =({titulo,Personajes,Peliculas,Contacto})=> {
             <NavLink activeClassName="active-link"  exact to="/Productos/Personajes">{Personajes} </NavLink>
             <NavLink activeClassName="active-link" exact to="/Productos/Peliculas" >{Peliculas} </NavLink>
             <NavLink activeClassName="active-link" to="/Contacto">{Contacto} </NavLink>
-            
-             
-             
-            
-            
-            <Link to="/cart">  <CartWidget/> </Link>
+            <Link to="/cart">  <CartWidget /> </Link>
+            <Link to="/login"> <LoginContainer/></Link>
         </section>
         
     </>

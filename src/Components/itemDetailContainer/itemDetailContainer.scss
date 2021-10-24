@@ -7,6 +7,7 @@
         color: rgb(206, 48, 206);
         font-family: 'fuente1';
         font-size: 6rem;
+        margin-top: -1rem;
     }
     }
     .itemDetailContainer{
@@ -29,8 +30,23 @@
         }
         .itemDetailPrice{
             font-size: 1.6rem;
-            color: #ffff;
+            color: rgb(255, 255, 255);
         }         
+        .counter{ 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            
+            flex-direction: column;
+            p{
+                color: rgb(255, 255, 255);
+                font-size: 1.5rem;
+            }
+            span{
+                color: rgb(255, 255, 250);
+                font-size: 1.5rem;
+            }
         .btn, .btn-primary {
             background: transparent;
             width: 66%;
@@ -38,10 +54,33 @@
             margin-top: 1rem;
             border: solid white 1px;
             border-radius: 20px;
-            color: #ffff;
+            color: #dd4ddd;
             font-weight: bolder;       
-            font-size: 1.4rem;             
+            font-size: 1.4rem;   
+            margin-bottom: 1rem;
+            cursor: pointer;
+            
+            &:hover{
+                border: solid #dd4ddd 1px;
+                background-color: white;
+                color: #dd4ddd;
+                border: solid #dd4ddd 2.2px;
+            }           
+
         }  
+        .btn-success{
+            color: rgb(25, 179, 25);
+            cursor: pointer;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+            border: solid white 1px;
+            &:hover{
+                background-color: forestgreen;
+                color: white;
+                border: solid white 2.2px;
+            }
+        }
+    }
          
     
         

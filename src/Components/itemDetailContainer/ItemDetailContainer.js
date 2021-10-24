@@ -5,7 +5,7 @@ import { ItemDetail } from "./itemDetail";
 
 
 export const ItemDetailContainer =()=>{
-
+    
     const [item, setItem]=useState([])
     const [loader, setLoader]=useState(false)
     const {itemId} = useParams()

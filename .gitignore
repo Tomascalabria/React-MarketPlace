@@ -4,13 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/Fonts
+/specimen_files
 # testing
 /coverage
 
 # production
 /build
-
+./src/Fonts
 # misc
 .DS_Store
 .env.local

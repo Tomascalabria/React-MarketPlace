@@ -1,5 +1,6 @@
 html{
   font-size: 62.5%;
+ 
 }
     @font-face {
       font-family: 'fuente1' ;
@@ -7,6 +8,7 @@ html{
     }
     body {
       margin: 0;
+     
       
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -24,3 +26,5 @@ html{
     // Item List Container 
     @import '../Components/ItemListContainer/itemListContainer.scss';
     @import '../Components/itemDetailContainer/itemDetailContainer.scss';
+    // Login Container//
+    @import '../Components/loginContainer/loginContainer.scss'
