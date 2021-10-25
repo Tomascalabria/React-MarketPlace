@@ -8,10 +8,12 @@ import { CartContext } from "./Contextos/CartContext.";
   
 
 function App() {
-const saludo ="hola carla mamita"
+const saludo =('fsafsafsfaf')
+const otroSaludo="GORASAFDASFA"
+
   return (
     <>
-    <CartContext.Provider value={saludo } />
+    <CartContext.Provider value={saludo, otroSaludo }>
     <BrowserRouter>
     <NavBar titulo= "TimBurton Shop" Personajes="Personajes" Peliculas="Peliculas" Contacto="Contacto"/>
     
@@ -48,7 +50,9 @@ const saludo ="hola carla mamita"
 
       
     </BrowserRouter>
+    </CartContext.Provider>
     </>
+    
   );
 }
 
