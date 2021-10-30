@@ -3,17 +3,19 @@ import { NavBar } from "./Components/NavBar/navBar";
 import {BrowserRouter,Route,Switch,Redirect} from "react-router-dom";
 
 import {ItemDetailContainer} from "../src/Components/itemDetailContainer/ItemDetailContainer"
-import { Login } from "./Components/loginContainer/login";
-import { CartContext } from "./Contextos/CartContext.";
-  
+// import { Login } from "./Components/loginContainer/login";
+import { CartProvider } from "./Contextos/CartContext.";
+import { CartScreen } from "./Components/CartScreen/CartScreen";
+
+
+
 
 function App() {
-const saludo =('fsafsafsfaf')
-const otroSaludo="GORASAFDASFA"
 
   return (
     <>
-    <CartContext.Provider value={saludo, otroSaludo }>
+
+    <CartProvider>
     <BrowserRouter>
     <NavBar titulo= "TimBurton Shop" Personajes="Personajes" Peliculas="Peliculas" Contacto="Contacto"/>
     
@@ -21,7 +23,7 @@ const otroSaludo="GORASAFDASFA"
     <Switch> 
     <Route exact path="/">
       <h3> INICIO </h3>
-      <ItemListContainer/>
+      <ItemListContainer />
     </Route>  
     <Route exact path="/Productos/:categoriaId">
     <ItemListContainer/>
@@ -37,20 +39,22 @@ const otroSaludo="GORASAFDASFA"
       </Route>
       
       <Route exact path="/cart">
-       <h3> PROXIMAMENTE </h3>
+       <CartScreen/ >
       </Route>
       
       <Route exact path="/detail/:itemId">
-        <ItemDetailContainer/>
+        <ItemDetailContainer />
       </Route>
     
       {/* <Route exact path="/login">
         <Login/>
       </Route> */}
 
-      
+   
     </BrowserRouter>
-    </CartContext.Provider>
+    </CartProvider>
+    
+
     </>
     
   );

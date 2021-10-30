@@ -7,6 +7,11 @@
       max-width: 100%;
       
 }
+.cart-container{
+    p{
+        font-family: 'fuente1';
+    }
+}
 
 .login-container{
 display: inline-flex;
@@ -16,6 +21,7 @@ gap: 15px;
     width: 60px;
     height:60px;
     position: relative;
+
 }
 .login{
    display: flex;
@@ -35,14 +41,15 @@ gap: 15px;
         
         
     }
-    p{
+   
+} p{
         
-        color: white;
-        font-family: 'fuente1';
-        font-size: 2rem;
-        position: absolute;
-        margin-top: 9rem;
-        
-    }
+    color: white;
+    font-family: 'fuente1';
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 9rem;
+    
 }
+
 }

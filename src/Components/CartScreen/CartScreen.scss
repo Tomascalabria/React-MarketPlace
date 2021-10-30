@@ -1,0 +1,122 @@
+.screenContainer{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+
+    .title{
+        color: #fff;
+        font-family: 'fuente1' ;
+        font-size: 5rem;
+        text-align: center;
+        width: 100%;
+        margin-left: 50px;
+        span{
+            width: 100px;
+            height: 80px;
+            margin-left: 50px;
+            margin-top: 100px;
+            position: relative;
+            -webkit-animation-name: rebote; 
+            -webkit-animation-duration: 1.2s; 
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: reverse; 
+            animation-name: rebote;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-timing-function: ease-out;
+          }
+          .rebote span{
+            background-color: #000000;
+            display: block;
+            margin-top: 0px;
+            height: 15px;
+            width: 0px;
+          }
+        }
+          /* Standard syntax */
+          @keyframes rebote {
+            0%   {left:0px; top:0px;}
+            25%  {left:0px; top:0px;}
+            50%  {left:0px; top:-10px;}
+            75%  {left:0px; top:-15px;}
+            100% {left:0px; top:0px;}
+          }
+          
+    
+
+    .cartProductContainer{ 
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-size: 1.6rem;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: stretch;
+      align-items: center;
+
+      .cartProductsList{
+        color: #fff;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+          .productImg{
+            width: 125px;
+            height: 125wpx;
+              & img{
+                width: 125px;
+                height: 125px;
+              }
+          }
+      }
+      .categoria{
+        color:rgb(206, 48, 206); 
+        font-weight: 500;
+      }
+      .button{
+        color:#ff0000;
+        background-color: transparent;
+        font-size: 1.8rem;
+        font-weight: 850;
+        border: red solid 2px;
+        border-top: transparent;
+        border-bottom: transparent;
+        box-shadow: -1px 2px 6px rgb(173, 57, 57);
+        &:hover{
+          color:#bd0303;
+        background-color: transparent;
+        font-size: 1.84rem;
+        font-weight: 855;
+        border: red solid 2px;
+        
+        }
+      }
+        .cartTotal{
+          width: 35%;
+          
+        .cartTotalTitle{
+          border: solid white 2px;
+          border-top: transparent;
+          border-left: transparent;
+          border-right: transparent;
+          font-size: 1.9rem;
+          color: rgb(206, 48, 206);
+          font-weight: 900;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          
+        }
+       }
+ 
+     }
+         }
+

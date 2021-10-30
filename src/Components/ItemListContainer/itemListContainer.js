@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router"
-import { CartContext } from "../../Contextos/CartContext."
+
 import { pedirProductos } from "../../helpers/pedirProducto"
 import { ItemList } from "./itemList"
 
@@ -12,9 +12,6 @@ const [items, setItems]=useState([])
 const [loader, setLoader]=useState(false)
 const {categoriaId}= useParams();
 
-
-const contexto = useContext(CartContext)
-console.log(contexto)
 
 
     useEffect(()=>{
@@ -40,11 +37,11 @@ console.log(contexto)
 
     return (
         <>
-        <section className="itemListContainer">
-            {
+            <section className="itemListContainer">
+                {
                 loader
                 ?<h2 > Cargando...</h2>
-                : <ItemList items={items} />
+                : <ItemList   items={items} />
             }
      
         </section>

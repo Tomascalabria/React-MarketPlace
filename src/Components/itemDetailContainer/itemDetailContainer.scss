@@ -37,8 +37,8 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: nowrap;
             p{
                 color: rgb(255, 255, 255);
                 font-size: 1.5rem;
@@ -47,6 +47,19 @@
                 color: rgb(255, 255, 250);
                 font-size: 1.5rem;
             }
+            .btn\+,.btn- {
+                width: 30%; 
+                
+
+            }
+            .btn\+{
+                margin-right: 2rem;
+            }
+            .btn-{
+                margin-left: 2rem;
+            }
+        }
+                        
         .btn, .btn-primary {
             background: transparent;
             width: 66%;
@@ -83,6 +96,3 @@
     }
          
     
-        
-     
-    }

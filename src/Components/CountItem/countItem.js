@@ -1,37 +1,38 @@
 import React from 'react'
-import {Button} from 'react-bootstrap';
-import { useState } from 'react';
-import { useHistory } from 'react-router'
-import { stock } from '../../data.js/stock';
+
 export const CountItem = ({cantidad,renderCantidad,stock}) => {
-    const handleCompra=()=>{
-        if( cantidad<stock){ 
+    const handleSumar=()=>{
+        if( cantidad<stock ){ 
         renderCantidad(cantidad+1)
         
         }
-
+        
 
     }
-    const {goBack, push} = useHistory()
+    const handleRestar=()=>{
+        if( cantidad>0){ 
+            renderCantidad(cantidad-1)
+            
+            }
+             
+    }
+    
 
     return (
         <div className="counter">
+        
+            <button 
+                className="btn btn+"
+                onClick={handleSumar}
+            >
+                +
+            </button>
               <p> <span> Cantidad:</span> {cantidad }    </p>   
               <button 
-                className="btn btn-success"
-                onClick={handleCompra}
+                className="btn btn-"
+                onClick={handleRestar}
             >
-                Agregar al carrito
-            </button>
-            <button 
-                className="btn btn-primary"
-                onClick={() => goBack()}
-            >
-                Volver
-            </button>
-
-            <button className="btn btn-primary" onClick={() => push("/")}>
-                Volver al inicio
+               -
             </button>
         </div>
     )

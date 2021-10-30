@@ -1,8 +1,8 @@
 import loginImg from '../../media/Login-Img.gif'    
-import { Login } from '../loginContainer/login'
+// import { Login } from '../loginContainer/login'
 
 
-export const LoginContainer = ({    })=>{
+export const LoginContainer = ()=>{
     return ( 
     <>
          <div className="login-container">

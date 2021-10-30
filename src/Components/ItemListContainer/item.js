@@ -1,24 +1,13 @@
-import React, { useState } from 'react';
+
+import { useContext } from 'react';
 import {Card,Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../Contextos/CartContext.';
+
+
 
 export const Item = ({ id, nombre, precio, img, categoria }) => {
-
- const [cantidad,setCantidad]=useState(0)
-
-
-  const addToCart=()=>{
-    const newItem ={
-      id,
-      nombre,
-      precio,
-      categoria,
-      cantidad
-      
-    }
-   console.log(newItem)
-  }
-
+  const {addToCart} = useContext(CartContext)
   return (
   
     <Card style={{ width: '18rem' }}>
@@ -33,7 +22,7 @@ export const Item = ({ id, nombre, precio, img, categoria }) => {
         <Card.Text className="categoria" >{categoria}</Card.Text>
         <Button className="btn btn-success" variant="btn"  >Agregar al Carrito  </Button>      
                 <Link to={`/detail/${id}`}>
-                    <Button  variant="primary">Ver Producto </Button>
+                    <Button variant="primary"onClick={() => addToCart(Item)} >Ver Producto </Button>
                 </Link>
 
       </Card.Body>
