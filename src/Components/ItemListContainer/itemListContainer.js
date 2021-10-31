@@ -3,7 +3,7 @@ import { useParams } from "react-router"
 
 import { pedirProductos } from "../../helpers/pedirProducto"
 import { ItemList } from "./itemList"
-
+import { getFirestore } from "../../Firebase/config"
 
 
 
@@ -13,27 +13,28 @@ const [loader, setLoader]=useState(false)
 const {categoriaId}= useParams();
 
 
+useEffect(()=>{
+    setLoadern(true)
 
-    useEffect(()=>{
-        setLoader(true)
+    const db = getFirestore()
+    const productos = categoriaId 
+                        ? db.collection('Stock').where('categoria', '==', categoriaId)
+                        : db.collection('Stock')
 
-        pedirProductos()
-        .then((res)=>{
-          
-            if (categoriaId){
-                setItems(res.filter(prod=>prod.categoria=== categoriaId))
-            }
-            else{
-                setItems(res)
-            }
+    productos.get()
+        .then((response) => {
+            const newItems = response.docs.map((doc) => {
+                return {id: doc.id, ...doc.data()}
+            })
+
+            setItems(newItems)
         })
-        .catch((err)=>console.log(err))
-        .finally(()=>{
-            setLoader(false)
-            console.log('fin del llamado')
-        })
-        
-    },[categoriaId])
+        .catch( err => console.log(err))
+        .finally(() => {
+            setLoader(false)}
+        )
+    
+}, [categoriaId, setLoader])
 
     return (
         <>
