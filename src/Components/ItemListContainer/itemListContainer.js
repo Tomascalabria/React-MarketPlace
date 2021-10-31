@@ -14,7 +14,7 @@ const {categoriaId}= useParams();
 
 
 useEffect(()=>{
-    setLoadern(true)
+    setLoader(true)
 
     const db = getFirestore()
     const productos = categoriaId 
