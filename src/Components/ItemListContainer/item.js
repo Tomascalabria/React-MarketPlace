@@ -20,9 +20,10 @@ export const Item = ({ id, nombre, precio, img, categoria }) => {
  
         <Card.Text><span>$</span>{precio}</Card.Text>
         <Card.Text className="categoria" >{categoria}</Card.Text>
+        
         <Button className="btn btn-success" variant="btn"  >Agregar al Carrito  </Button>      
                 <Link to={`/detail/${id}`}>
-                    <Button variant="primary"onClick={() => addToCart(Item)} >Ver Producto </Button>
+                    <Button variant="primary" >Ver Producto </Button>
                 </Link>
 
       </Card.Body>

@@ -4,7 +4,7 @@ import { CartWidget } from '../CartWidget/CartWidget';
 import { LoginContainer } from '../loginContainer/loginContainer';
 
 
-export const NavBar =({titulo,Personajes,Peliculas,Contacto,Login})=> {
+export const NavBar =({titulo,Series,Peliculas,Contacto,Login})=> {
 
     return(
         <>
@@ -14,7 +14,7 @@ export const NavBar =({titulo,Personajes,Peliculas,Contacto,Login})=> {
              <NavLink to ="/"> <h3>{titulo}</h3> </NavLink>
             </div>
 
-            <NavLink activeClassName="active-link"  exact to="/Productos/Personajes">{Personajes} </NavLink>
+            <NavLink activeClassName="active-link"  exact to="/Productos/Series">{Series} </NavLink>
             <NavLink activeClassName="active-link" exact to="/Productos/Peliculas" >{Peliculas} </NavLink>
             <NavLink activeClassName="active-link" to="/Contacto">{Contacto} </NavLink>
             <Link to="/cart">  <CartWidget /> </Link>

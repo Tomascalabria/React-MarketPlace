@@ -1,5 +1,5 @@
 import   { createContext,useState,useEffect} from 'react'
-import { useParams } from 'react-router'
+
 
 export const    CartContext = createContext()
 

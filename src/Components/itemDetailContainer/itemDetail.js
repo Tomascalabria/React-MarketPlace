@@ -17,6 +17,7 @@ export const ItemDetail = ({ id, nombre, precio, img, descripcion, categoria,sto
     const handleAgregar = () => {
         const newItem = {
             id,
+            img,
             nombre,
             precio,
             categoria,

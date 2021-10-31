@@ -17,7 +17,7 @@ function App() {
 
     <CartProvider>
     <BrowserRouter>
-    <NavBar titulo= "TimBurton Shop" Personajes="Personajes" Peliculas="Peliculas" Contacto="Contacto"/>
+    <NavBar titulo= "TimBurton Shop" Series="Series" Peliculas="Peliculas" Contacto="Contacto"/>
     
     
     <Switch> 

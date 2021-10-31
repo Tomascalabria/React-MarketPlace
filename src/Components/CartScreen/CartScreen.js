@@ -13,23 +13,29 @@ export const CartScreen = () => {
             <h3 className="title" > Resumen de Compra<span>.</span><span>.</span><span>.</span> </h3>  
             
             <div className="cartProductContainer">
-                
+            <div className="ProdCategoria">
+            <p className="none"> </p >
+            <p>  Producto   </p>
+            <p>  Cantidad     </p>
+            <p >Precio X unidad   </p>
+            <p>                      </p>
+                             </div>
             {
                 carrito.map( (prod) => (
                     
                     <div className="cartProductsList">
                     
-                    <img alt="productImg" className="productImg" src={(prod.img)}></img>
+                    <img alt="productImg" className="productImg" src={prod.img}></img>
                     <div className="ProdItem">
-                    <p className="categoria">  Producto               </p>
+                    <p className="categoria">                 </p>
                     <p>  {prod.nombre} </p>
                     </div>
                     <div className="prodItem">
-                    <p className="categoria">  Cantidad               </p>
+                    <p className="categoria">                 </p>
                     <p>  {prod.cantidad}  </p>
                     </div>
                     <div className="ProdItem">
-                    <p  className="categoria">  Precio X unidad       </p>
+                    <p  className="categoria">        </p>
                     <p> $ {prod.precio}    </p>
                     </div>
                     <div className="ProdItem" >
