@@ -23,11 +23,11 @@ useEffect(()=>{
 
     productos.get()
         .then((response) => {
-            const newItems = response.docs.map((doc) => {
+            const newItem = response.docs.map((doc) => {
                 return {id: doc.id, ...doc.data()}
             })
 
-            setItems(newItems)
+            setItems(newItem)
         })
         .catch( err => console.log(err))
         .finally(() => {
@@ -42,7 +42,7 @@ useEffect(()=>{
                 {
                 loader
                 ?<h2 > Cargando...</h2>
-                : <ItemList   items={items} />
+                : <ItemList   items={items } />
             }
      
         </section>

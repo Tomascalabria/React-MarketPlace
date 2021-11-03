@@ -1,27 +1,35 @@
 import React, { useEffect,useState} from "react";
 import { useParams } from "react-router";
-import { pedirProductos } from "../../helpers/pedirProducto";
 import { ItemDetail } from "./itemDetail";
-
+import { getFirestore } from "../../Firebase/config";
 
 export const ItemDetailContainer =()=>{
     
     const [item, setItem]=useState([])
     const [loader, setLoader]=useState(false)
-    const {itemId} = useParams()
+    const {categoriaId } = useParams()
 
     useEffect(()=>{
         setLoader(true)
+        
+        const db = getFirestore()
+        const productos = db.collection('Stock')
+        const item = productos.doc(categoriaId )
 
-        pedirProductos()
-            .then( res => {
-                setItem( res.find( prod => prod.id === Number(itemId)) )
+        item.get()
+            .then((doc) => {
+                setItem({
+                    id: doc.id,
+                    ...doc.data()
+                })
             })
-            .finally(()=> {
+
+            .finally(() => {
                 setLoader(false)
             })
 
-    }, [itemId])
+    }, [categoriaId , setLoader]);
+
 
     return(
         <div className="container">

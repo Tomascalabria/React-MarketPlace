@@ -39,7 +39,7 @@ function App() {
       </Route>
       
       <Route exact path="/cart">
-       <CartScreen/ >
+       <CartScreen/>
       </Route>
       
       <Route exact path="/detail/:itemId">

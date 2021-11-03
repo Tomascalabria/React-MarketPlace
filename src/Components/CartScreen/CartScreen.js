@@ -14,11 +14,11 @@ export const CartScreen = () => {
             
             <div className="cartProductContainer">
             <div className="ProdCategoria">
-            <p className="none"> </p >
+          
             <p>  Producto   </p>
             <p>  Cantidad     </p>
             <p >Precio X unidad   </p>
-            <p>                      </p>
+      
                              </div>
             {
                 carrito.map( (prod) => (
