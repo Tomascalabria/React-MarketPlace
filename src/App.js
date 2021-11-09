@@ -1,6 +1,6 @@
 import { ItemListContainer } from "./Components/ItemListContainer/itemListContainer";
 import { NavBar } from "./Components/NavBar/navBar";
-import {BrowserRouter,Route,Switch,Redirect} from "react-router-dom";
+import {BrowserRouter,Route,Switch,Redirect, HashRouter} from "react-router-dom";
 
 import {ItemDetailContainer} from "../src/Components/itemDetailContainer/ItemDetailContainer"
 import { Login } from "./Components/loginContainer/login";
@@ -15,10 +15,10 @@ function App() {
 
   return (
     <>
-    <SessionProvider>
+ 
 
     <CartProvider>
-    <BrowserRouter>
+    <HashRouter>
     <NavBar titulo= "TimBurton Shop" Series="Series" Peliculas="Peliculas" Contacto="Contacto"/>
     
     
@@ -53,13 +53,12 @@ function App() {
       </Route> 
 
    
-    </BrowserRouter>
+    </HashRouter>
     </CartProvider>
-    </SessionProvider>
+
     </>
     
   );
 }
 
 export default App;
-
