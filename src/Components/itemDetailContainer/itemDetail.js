@@ -5,8 +5,7 @@ import { CartContext } from '../../Contextos/CartContext.'
 
 
 
-
-export const ItemDetail = ({ id, nombre, precio, img, descripcion, categoria,stock,} ) => {
+export const ItemDetail = ({ id, nombre, precio, img, descripcion, categoria,stock} ) => {
     
     const {addToCart}=useContext(CartContext)
 
@@ -35,7 +34,7 @@ export const ItemDetail = ({ id, nombre, precio, img, descripcion, categoria,sto
             <h2 className="itemDetailName">{nombre}</h2>
             <img className="itemDetailImg" src={img} alt={nombre}/>
             <p className="itemDetailDesc">{descripcion}</p>
-            <h4 className="itemDetailPrice">Precio: ${precio} </h4>
+            <h4 className="itemDetailPrice">Precio:   ${precio}  </h4>
             
             <CountItem cantidad={cantidad} renderCantidad={setCantidad} stock={stock} />
             <button 

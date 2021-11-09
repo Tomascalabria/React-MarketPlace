@@ -6,6 +6,7 @@ export const CartScreen = () => {
     const {carrito,costoTotal,removerItem} = useContext(CartContext)
  
     
+ 
 
     return (
         
@@ -14,12 +15,10 @@ export const CartScreen = () => {
             
             <div className="cartProductContainer">
             <div className="ProdCategoria">
-          
             <p>  Producto   </p>
             <p>  Cantidad     </p>
             <p >Precio X unidad   </p>
-      
-                             </div>
+              </div>
             {
                 carrito.map( (prod) => (
                     
@@ -27,15 +26,15 @@ export const CartScreen = () => {
                     
                     <img alt="productImg" className="productImg" src={prod.img}></img>
                     <div className="ProdItem">
-                    <p className="categoria">                 </p>
+                    
                     <p>  {prod.nombre} </p>
                     </div>
                     <div className="prodItem">
-                    <p className="categoria">                 </p>
+                    
                     <p>  {prod.cantidad}  </p>
                     </div>
                     <div className="ProdItem">
-                    <p  className="categoria">        </p>
+                
                     <p> $ {prod.precio}    </p>
                     </div>
                     <div className="ProdItem" >

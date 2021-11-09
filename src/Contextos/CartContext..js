@@ -1,7 +1,6 @@
 import   { createContext,useState,useEffect} from 'react'
 
-
-export const    CartContext = createContext()
+export const CartContext = createContext()
 
 
 const init = JSON.parse(sessionStorage.getItem('carrito'))||[]

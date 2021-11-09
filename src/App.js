@@ -3,9 +3,10 @@ import { NavBar } from "./Components/NavBar/navBar";
 import {BrowserRouter,Route,Switch,Redirect} from "react-router-dom";
 
 import {ItemDetailContainer} from "../src/Components/itemDetailContainer/ItemDetailContainer"
-// import { Login } from "./Components/loginContainer/login";
+import { Login } from "./Components/loginContainer/login";
 import { CartProvider } from "./Contextos/CartContext.";
 import { CartScreen } from "./Components/CartScreen/CartScreen";
+import {Provider as SessionProvider} from "./Contextos/SessionContext";
 
 
 
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+    <SessionProvider>
 
     <CartProvider>
     <BrowserRouter>
@@ -46,15 +48,14 @@ function App() {
         <ItemDetailContainer />
       </Route>
     
-      {/* <Route exact path="/login">
+     <Route exact path="/login">
         <Login/>
-      </Route> */}
+      </Route> 
 
    
     </BrowserRouter>
     </CartProvider>
-    
-
+    </SessionProvider>
     </>
     
   );

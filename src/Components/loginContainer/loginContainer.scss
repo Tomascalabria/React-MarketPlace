@@ -1,7 +1,100 @@
 .loginContainer{
     color: #ffff;
-    form{
-       background-color: #ffff  ; 
-    }   
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 12rem;
+    
+
+    .labelEmail{
+        font-size: 22px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #ce30ce;
+        margin-bottom: 2rem;
+        
+        
+    }
+    .email{
+        width: 100%;
+        height: 30px;
+        border-radius: 5%;
+        border: 3px solid darkorchid;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: black;    
+        &:focus{
+            background-color: black;
+            color: rgb(248, 10, 248);
+            font-weight: 650;
+        }
+    }
+    .text-muted{
+        margin-bottom: 2.4rem; 
+        margin-top: -1.5rem; 
+        color: white;  
+        display: block;
+     }
+    
+
+    .labelPassword{
+        width: 100%;
+        font-size: 22px;;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #ce30ce;
+    
+    }
+    .password{
+        width: 100%;
+        height: 25px;
+        border-radius: 5%;
+        border: 3px solid darkorchid;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: black;
+        &:focus{
+            background-color: black;
+            color: rgb(248, 10, 248);
+            font-weight: 650;
+        }
+    
+    }
+    input[type=checkbox]{
+        width: 20px;
+        height: 20px;
+        border-radius: 5%;
+        border: 3px solid darkorchid;
+        padding: 10px;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+
+    }
+    button[type=submit]{
+        width: 10%;
+        height: 30px;
+        border: 1.2px solid white;
+        margin-bottom: 2rem;
+        font-size: 1.9rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color:  rgb(248, 10, 248);;
+        background-color: transparent;
+        
+
+    }
+    .googleLogin{
+        background-color:white;
+        color: #000;
+    }
 }
- 

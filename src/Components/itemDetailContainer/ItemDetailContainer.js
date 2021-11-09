@@ -7,14 +7,13 @@ export const ItemDetailContainer =()=>{
     
     const [item, setItem]=useState([])
     const [loader, setLoader]=useState(false)
-    const {categoriaId } = useParams()
+    const {itemId } = useParams()
 
     useEffect(()=>{
         setLoader(true)
-        
         const db = getFirestore()
         const productos = db.collection('Stock')
-        const item = productos.doc(categoriaId )
+        const item = productos.doc(itemId)
 
         item.get()
             .then((doc) => {
@@ -23,12 +22,12 @@ export const ItemDetailContainer =()=>{
                     ...doc.data()
                 })
             })
-
+            .catch( err => console.log(err))
             .finally(() => {
                 setLoader(false)
             })
 
-    }, [categoriaId , setLoader]);
+    }, [itemId, setLoader])
 
 
     return(

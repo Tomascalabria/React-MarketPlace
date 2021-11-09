@@ -1,43 +1,43 @@
-// import React from "react";
-// import { Form, Button, Col} from 'react-bootstrap';
-// export const Login = () =>{
+import React from "react";
+import { Form, Button} from 'react-bootstrap';
+import {GoogleLogin} from 'react-google-login';
 
- 
-// fetch('https://imdb-api.com/en/API/Title/k_12345678/tt1375666/FullActor,Posters')
-//   .then(res=> res.json())
-//   .then( (data) => { 
-//       console.log(data)
-//   })
-//   .catch(error => console.log('error', error));
+export const Login = ({ signIn, status }) =>{
 
-//        return (
-//         <>
-       
-//        <Form>
-//                         {/* <Form.Row>
-//                             <Form.Group as={Col} controlId="formFirstName">
-//                                 <Form.Label className="label">First Name</Form.Label>
-//                                 <Form.Control type="text" name="firstName" required />
-//                             </Form.Group>
+       return (
+        
+        <>   
+  <Form className="loginContainer">
+  <Form.Group className="mb-3 " controlId="formBasicEmail">
+    <Form.Label className="labelEmail">Email address</Form.Label>
+    <Form.Control  className="email" type="email" placeholder="Enter email" required="required" />
+    <Form.Text className="text-muted">
+      We'll never share your email with anyone else.
+    </Form.Text>
+  </Form.Group>
 
-//                             <Form.Group as={Col} controlId="formLastName">
-//                                 <Form.Label className="label">Last Name</Form.Label>
-//                                 <Form.Control type="text" name="lastName" required />
-//                             </Form.Group>
-//                             </Form.Row>
+  <Form.Group className="mb-3  " controlId="formBasicPassword">
+    <Form.Label  className="labelPassword">Password</Form.Label>
+    <Form.Control className="password"  type="password" placeholder="Password" required="required" />
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" className="checkbox" label="Acepto Terminos y Condiciones"  required="required"  />
+  </Form.Group>
+  <Button variant="primary" type="submit">
+      
+    Submit
+  </Button>
 
-//                         <Form.Group controlId="formEmail">
-//                             <Form.Label className="label">Email Address</Form.Label>
-//                             <Form.Control
-//                             type="email"  name="email" required />
-//                         </Form.Group>
+ <div>
+    {status === "init" && <span>Intentando de restaurar sesión...</span>}
+    {status === "restored" && <button className="googleLogin" onClick={signIn}><GoogleLogin/></button>}
 
-//                         <Button variant="primary" >Enviar</Button>
-//                     </Form>
-  
-   
+    {status === "init" && console.log('sesion iniciada')  || status === "restored" && console.log('sesion restaurada')}
+  </div>
 
-//         </>
-
-//  */}
-
+</Form>
+    
+     
+         </>
+       )};
+  export default Login;
