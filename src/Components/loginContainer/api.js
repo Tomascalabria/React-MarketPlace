@@ -1,4 +1,4 @@
-import { auth, providers } from "../../Firebase/config";
+import { auth, providers} from "../../Firebase/config";
 
 export default {
   signIn: () => auth.signInWithPopup(providers.google),

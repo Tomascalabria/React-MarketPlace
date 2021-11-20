@@ -142,4 +142,59 @@
 
       }
         
+      .carritoVacio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        h2{ 
+        font-family: 'fuente1' ;
+        color: rgb(206, 48, 206);
+        height: 100%;
+        font-size: 6rem;
+      }
+      .btn, .btn-primary {
+        background: transparent;
+        width: 100%;
+        height: 4rem;
+        margin-top: 1rem;
+        border: solid white 4px;
+        border-radius: 20px;
+        color: #dd4ddd;
+        font-weight: 910;
+        font-size: 1.4rem;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        &:hover{
+            border: solid #dd4ddd 1px;
+            background-color: white;
+            color: #dd4ddd;
+            font-weight: 910;
+            border: solid #dd4ddd 4px;
+        }           
 
+       
+    }  
+        
+    }
+ 
+    .btn-primary,.btn {
+      width: 15rem;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;  border-radius: 20px;
+      background-color: transparent;
+      color: rgb(14, 226, 14);
+      font-weight: bolder;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+         
+          &:hover{
+            background-color: rgb(38, 70, 28);
+            color: rgb(255, 255, 255);
+            font-weight: bolder;
+          }
+       
+      } 

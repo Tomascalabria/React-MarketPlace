@@ -18,7 +18,8 @@ const firebaseConfig={
       return firebase.firestore(app)
       
   }
-  
+
+
   const auth = firebase.auth();
   const providers = {
     google: new firebase.auth.GoogleAuthProvider(),

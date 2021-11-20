@@ -1,24 +1,27 @@
 import { ItemListContainer } from "./Components/ItemListContainer/itemListContainer";
 import { NavBar } from "./Components/NavBar/navBar";
-import {BrowserRouter,Route,Switch,Redirect, HashRouter} from "react-router-dom";
+import {Route,Switch,Redirect, HashRouter} from "react-router-dom";
 
 import {ItemDetailContainer} from "../src/Components/itemDetailContainer/ItemDetailContainer"
 import { Login } from "./Components/loginContainer/login";
 import { CartProvider } from "./Contextos/CartContext.";
 import { CartScreen } from "./Components/CartScreen/CartScreen";
-import {Provider as SessionProvider} from "./Contextos/SessionContext";
 
-
+import { Provider as SessionProvider} from "./Contextos/SessionContext";
+import { Checkout } from "./Components/Checkout/Checkout";
 
 
 function App() {
+  
 
   return (
     <>
- 
-
-    <CartProvider>
+      <SessionProvider>
     <HashRouter>
+
+     <CartProvider>
+
+
     <NavBar titulo= "TimBurton Shop" Series="Series" Peliculas="Peliculas" Contacto="Contacto"/>
     
     
@@ -52,10 +55,18 @@ function App() {
         <Login/>
       </Route> 
 
-   
-    </HashRouter>
-    </CartProvider>
+      <Route exact path="/Checkout">
+        <Checkout/>
+        </Route>  
 
+   
+   
+    
+
+    </CartProvider>
+    </HashRouter>
+    </SessionProvider>
+ 
     </>
     
   );

@@ -14,6 +14,9 @@ export const CartProvider =({children})=>{
       setCarrito( [...carrito, item] )
     
     }
+    const vaciarCarrito = () => {
+      setCarrito([])
+    }
     
     const calcularCantidad = () => {
       return carrito.reduce( (acc, prod) => acc + prod.cantidad, 0 )
@@ -26,10 +29,11 @@ export const CartProvider =({children})=>{
         return carrito.reduce( (acc, prod) => acc + prod.cantidad * prod.precio, 0)
       }
     
-    useEffect(()=>{
-      sessionStorage.setItem('carrito', JSON.stringify(carrito))
-    }, [carrito])
+      useEffect(()=>{
+        sessionStorage.setItem('carrito', JSON.stringify(carrito))
+      }, [carrito])
     
+      
        
     return( 
     <CartContext.Provider value={{

@@ -1,12 +1,15 @@
 html{
+  
   font-size: 62.5%;
- 
+
+
 }
     @font-face {
       font-family: 'fuente1' ;
       src: url(../../src/Fonts/NightmareBeforeChristmas-2v8e.ttf);
     }
     body {
+     
       margin: 0;
      
       
@@ -17,8 +20,8 @@ html{
       sans-serif;
       background-color: black
 
-     }
-
+ 
+    }
     //  navbar
      @import'../Components/NavBar/navBar.scss';
     //  CartWidget
@@ -30,3 +33,5 @@ html{
     @import '../Components/loginContainer/loginContainer.scss';
     // Cart Screen//
     @import '../Components/CartScreen/CartScreen.scss';
+    // Checkout Screen//
+    @import '../Components/Checkout/Checkout.scss';

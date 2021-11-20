@@ -93,8 +93,15 @@
         
 
     }
-    .googleLogin{
-        background-color:white;
-        color: #000;
+  
+}
+.googleLogin{
+    button{
+        font-weight: 900;
+        color: black;
+        background-color: transparent;
+        color: transparent;
+        display: block;
     }
+ 
 }

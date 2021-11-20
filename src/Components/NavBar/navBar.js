@@ -4,7 +4,7 @@ import { CartWidget } from '../CartWidget/CartWidget';
 import { LoginContainer } from '../loginContainer/loginContainer';
 
 
-export const NavBar =({titulo,Series,Peliculas,Contacto,Login})=> {
+export const NavBar =({titulo,Series,Peliculas,Contacto})=> {
 
     return(
         <>

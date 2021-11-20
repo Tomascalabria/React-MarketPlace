@@ -1,11 +1,10 @@
-import React from "react";
-
+import React, {useContext} from "react";
 import SessionContext from "../../Contextos/SessionContext";
 
 export function useUser() {
-  const {
-    state: { user },
-  } = React.useContext(SessionContext);
+  const {state, user} = useContext(SessionContext);
 
-  return user;
+
+
+  return (user); 
 }
