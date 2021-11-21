@@ -1,12 +1,14 @@
-import React,{useContext} from 'react'
+import React,{useContext, useState} from 'react'
 import { Form,Row,FormGroup,FormLabel,FormCheck,FormControl,Col,Button, NavLink } from 'react-bootstrap'
 import { CartContext } from '../../Contextos/CartContext.'
 import Swal from 'sweetalert2'
+import { Route } from 'react-router'
 
 
 export const Checkout = () => {
 
-  const{ carrito,costoTotal,vaciarCarrito}=useContext(CartContext)
+  
+  const{ carrito,setCarrito,costoTotal,vaciarCarrito}=useContext(CartContext)
   const alert=(e)=>{{
     e.preventDefault()
     Swal.fire({
@@ -15,11 +17,15 @@ export const Checkout = () => {
       icon: 'success',
       confirmButtonText: 'Cool'
       
-    
+
     })
-    if(carrito.length==0){
-      vaciarCarrito()
+ let  alert=()=>{
+   setCarrito([])
+ }
+   
     }
+    if(carrito.length==0){
+      <Route redirect to="./"> </Route>
   }
 }
   
